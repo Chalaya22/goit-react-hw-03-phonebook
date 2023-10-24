@@ -13,3 +13,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.titlePhone {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  color: rgb(226, 43, 153);
+}
+.titleContact {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  color: rgb(226, 43, 153);
+}

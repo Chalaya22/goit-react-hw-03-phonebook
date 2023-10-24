@@ -1,0 +1,23 @@
+.contactElements {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 14px;
+  gap: 14px;
+}
+.contactElements:before {
+  content: '•';
+  color: teal;
+  width: 1em;
+}
+.itemButton {
+  align-self: flex-start;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: teal;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: auto;
+}
