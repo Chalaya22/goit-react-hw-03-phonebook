@@ -15,6 +15,19 @@ export class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    const contactsInString = localStorage.getItem('contacts');
+    const contactsIsParsed =
+      JSON.parse(contactsInString) ?? this.state.contacts;
+    this.setState({ contacts: contactsIsParsed });
+  }
+  componentDidUpdate(_, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      const contactsInString = JSON.stringify(this.state.contacts);
+      localStorage.setItem('contacts', contactsInString);
+    }
+  }
+
   //add
   handleAddContact = contactList => {
     if (
@@ -23,6 +36,7 @@ export class App extends Component {
       alert(`'${contactList.name}' is already in contact`);
       return;
     }
+
     const newContact = {
       ...contactList,
       id: nanoid(),
